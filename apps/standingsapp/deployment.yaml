@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: standingsapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: standingsapp
+  template:
+    metadata:
+      labels:
+        app: standingsapp
+    spec:
+      containers:
+        - name: standingsapp
+          image: radosz365/standingsapp:latest
+          ports:
+            - containerPort: 80

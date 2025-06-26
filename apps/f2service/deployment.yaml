@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: f2service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: f2service
+  template:
+    metadata:
+      labels:
+        app: f2service
+    spec:
+      containers:
+        - name: f2service
+          image: radosz365/f2service:latest
+          ports:
+            - containerPort: 80

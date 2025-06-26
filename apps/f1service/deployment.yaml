@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: f1service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: f1service
+  template:
+    metadata:
+      labels:
+        app: f1service
+    spec:
+      containers:
+        - name: f1service
+          image: radosz365/f1service:latest
+          ports:
+            - containerPort: 80
