@@ -17,7 +17,7 @@ spec:
           image: radosz365/standingsapp:latest
           ports:
             - containerPort: 80
-          redinessProbe:
+          readinessProbe:
             httpGet:
               path: /
               port: 80
