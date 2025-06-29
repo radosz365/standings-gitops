@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
         - name: f1service
-          image: radosz365/f1service:latest
+          image: radosz365/f1service:flux-test
           ports:
             - containerPort: 80
-            
